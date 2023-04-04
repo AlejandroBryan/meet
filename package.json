@@ -31,7 +31,8 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "gh-page": "gh-pages -d build",
-    "deploy": "git add . && git commit -m 'serverless configuration changes' && git push && npm run gh-page"
+    "git":"git add . && git commit -m 'add the build directory' && git push",
+    "deploy": "npm run git && npm run build && npm run gh-page"
   },
   "eslintConfig": {
     "extends": [
