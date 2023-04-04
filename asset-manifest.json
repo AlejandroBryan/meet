@@ -1,17 +1,16 @@
 {
-  "files": {
-    "main.css": "/AlejandroBryan/meet.git/static/css/main.073c9b0a.css",
-    "main.js": "/AlejandroBryan/meet.git/static/js/main.2dd8dc80.js",
-    "static/js/787.4b564826.chunk.js": "/AlejandroBryan/meet.git/static/js/787.4b564826.chunk.js",
-    "service-worker.js": "/AlejandroBryan/meet.git/service-worker.js",
-    "static/media/logo.svg": "/AlejandroBryan/meet.git/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
-    "index.html": "/AlejandroBryan/meet.git/index.html",
-    "main.073c9b0a.css.map": "/AlejandroBryan/meet.git/static/css/main.073c9b0a.css.map",
-    "main.2dd8dc80.js.map": "/AlejandroBryan/meet.git/static/js/main.2dd8dc80.js.map",
-    "787.4b564826.chunk.js.map": "/AlejandroBryan/meet.git/static/js/787.4b564826.chunk.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.2dd8dc80.js"
-  ]
+  "main.css": "/AlejandroBryan/meet.git/static/css/main.71d0e1ee.chunk.css",
+  "main.js": "/AlejandroBryan/meet.git/static/js/main.724d2c83.chunk.js",
+  "main.js.map": "/AlejandroBryan/meet.git/static/js/main.724d2c83.chunk.js.map",
+  "static/js/1.0fc11f77.chunk.js": "/AlejandroBryan/meet.git/static/js/1.0fc11f77.chunk.js",
+  "static/js/1.0fc11f77.chunk.js.map": "/AlejandroBryan/meet.git/static/js/1.0fc11f77.chunk.js.map",
+  "static/js/2.6422faee.chunk.js": "/AlejandroBryan/meet.git/static/js/2.6422faee.chunk.js",
+  "static/js/2.6422faee.chunk.js.map": "/AlejandroBryan/meet.git/static/js/2.6422faee.chunk.js.map",
+  "runtime~main.js": "/AlejandroBryan/meet.git/static/js/runtime~main.163291bd.js",
+  "runtime~main.js.map": "/AlejandroBryan/meet.git/static/js/runtime~main.163291bd.js.map",
+  "static/media/logo.svg": "/AlejandroBryan/meet.git/static/media/logo.5d5d9eef.svg",
+  "static/css/main.71d0e1ee.chunk.css.map": "/AlejandroBryan/meet.git/static/css/main.71d0e1ee.chunk.css.map",
+  "index.html": "/AlejandroBryan/meet.git/index.html",
+  "precache-manifest.34083a469be4f0a7c9681b02b60725a7.js": "/AlejandroBryan/meet.git/precache-manifest.34083a469be4f0a7c9681b02b60725a7.js",
+  "service-worker.js": "/AlejandroBryan/meet.git/service-worker.js"
 }
