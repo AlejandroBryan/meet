@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/AlejandroBryan/meet/precache-manifest.032330049fa69cdbfcb35efe95faa29a.js"
+  "/AlejandroBryan.github.io/meet/precache-manifest.78cb1c1c795e709b7d293c3f036105c8.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/AlejandroBryan/meet/index.html", {
+workbox.routing.registerNavigationRoute("/AlejandroBryan.github.io/meet/index.html", {
   
   blacklist: [/^\/_/,/\/[^/]+\.[^/]+$/],
 });
