@@ -32,7 +32,7 @@
     "predeploy": "npm run build",
     "gh-page": "gh-pages -d build",
     "git":"git add . && git commit -m 'add the build directory' && git push",
-    "deploy": "npm run git && npm run build && npm run gh-page"
+    "deploy": "npm run build && npm run git && npm run gh-page"
   },
   "eslintConfig": {
     "extends": [
