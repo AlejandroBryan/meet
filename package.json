@@ -2,7 +2,7 @@
   "name": "meet",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/AlejandroBryan/meet",
+  "homepage": "https://github.com/AlejandroBryan.github.io/meet",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
@@ -31,7 +31,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "gh-page": "gh-pages -d build",
-    "git":"git add . && git commit -m 'update the homepage url' && git push",
+    "git":"git add . && git commit -m 'update homepage url' && git push",
     "deploy": "npm run build && npm run git && npm run gh-page"
   },
   "eslintConfig": {
