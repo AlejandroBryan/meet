@@ -5,6 +5,10 @@ In this Repository i will show up my learned skill on the "Testing in the Develo
 test-driven development (TDD) technique. The application uses the Google
 Calendar API to fetch upcoming events.
 
+Why going Serverless?
+
+I just want to focus my self on the client logic and throughout achieving my goals as soon as possible while taking advantages of all of the features available on the serverless functions.
+
 ## Getting Started
 
 ### Dependencies

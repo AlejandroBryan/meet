@@ -25,12 +25,13 @@
     "workbox-streams": "^6.5.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "gh-page": "gh-pages -d build",
+    "deploy": "git add . && git commit -m 'serverless configuration changes' && git push && npm run gh-page"
   },
   "eslintConfig": {
     "extends": [
