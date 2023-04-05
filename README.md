@@ -1,7 +1,8 @@
 # Meet
 
+
 ## Description 
-In this Repository i will show up my learned skill on the "Testing in the Development Process" at [Carrerfoundry](https://careerfoundry.com). It consist of building a serverless, progressive web application (PWA) with React using a
+In this Repository i will show up my learned skill on the "Testing in the Development Process" at [Carrerfoundry](https://careerfoundry.com). It consist of building [Mee app](https://alejandrobryan.com/meet) a serverless, progressive web application (PWA) with React using a
 test-driven development (TDD) technique. The application uses the Google
 Calendar API to fetch upcoming events.
 
