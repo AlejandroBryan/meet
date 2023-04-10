@@ -28,7 +28,6 @@ describe('<NumberOfEvents/> Component', () => {
         const eventObject = { target: { number: 'value' } };
         NumberOfEventsWrapper.find('.number').simulate('change', eventObject);
         expect(NumberOfEventsWrapper.state('number')).not.toBe(defaultValue);
-        console.log(NumberOfEventsWrapper)
       });
 
    

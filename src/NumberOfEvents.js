@@ -14,21 +14,23 @@ export default class NumberOfEvents extends Component{
 
 render() {
     const { number } = this.state;
-    console.log(number);
+ 
     return (
-        <>
-        <label for="default-number"> Number of events</label>
+        <div className="numberOfEvents">
+        <h4>
+         Number of events
+        </h4>
          <input 
-          type="textbox" 
-          id="default-number"
-          className='number' 
+          type="number" 
+          id="default-number" 
           name="number" 
-          value={this.state.number}
+          className='number'
+          value={number}
           onChange={this.handleChange}
+          max={32}
+          min={0}
           />
-        
-        
-        </>
+        </div>
      
     )
 }

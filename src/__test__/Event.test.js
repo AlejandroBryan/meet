@@ -5,7 +5,6 @@ import { mockData } from '../mock-data';
 describe('<Event /> Component', () => {
     let EventWrapper;
     const event = mockData[0]
-    console.log(event)
     beforeAll(()=> {
       EventWrapper = shallow(<Event event={event}/>)
       
@@ -16,12 +15,9 @@ describe('<Event /> Component', () => {
     })
 
     test('render show details button', () => {
-      expect(EventWrapper.find('.details')).toHaveLength(1);
+      expect(EventWrapper.find('.details-btn')).toHaveLength(1);
     });
     
-    test('render hide details button', () => {
-      expect(EventWrapper.find('.hide')).toHaveLength(1);
-    });
 
     test('render event view', () => {
       expect(EventWrapper.find('.event')).toHaveLength(1);
@@ -42,10 +38,10 @@ describe('<Event /> Component', () => {
         collapsed: true
       });
 
-      const eventObject = EventWrapper.setState({ collapsed: false });
-      EventWrapper.find('.hide').simulate('click', eventObject);
+      const eventObject = EventWrapper.update();
+      EventWrapper.find('.details-btn').simulate('click', eventObject);
       expect(EventWrapper.state('collapsed')).toBe(false);
-      expect(EventWrapper.find('.hide').text()).toBe('hide details')
+      expect(EventWrapper.find('.details-btn').text()).toBe('hide details')
     });
 
     test('Show event details button', () => {
@@ -53,10 +49,10 @@ describe('<Event /> Component', () => {
         collapsed: false
       });
 
-      const eventObject = EventWrapper.setState({ collapsed: true });
-      EventWrapper.find('.details').simulate('click', eventObject);
+      const eventObject = EventWrapper.update();
+      EventWrapper.find('.details-btn').simulate('click', eventObject);
       expect(EventWrapper.state('collapsed')).toBe(true);
-      expect(EventWrapper.find('.details').text()).toBe('show details')
+      expect(EventWrapper.find('.details-btn').text()).toBe('show details')
     });
 
 
