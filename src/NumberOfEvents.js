@@ -5,18 +5,20 @@ export default class NumberOfEvents extends Component{
     constructor() {
         super();
         this.state = {
-            number: 32
+            query: 32
         }
     }
     handleChange = (e) => {
-        this.setState({number: e.target.value})
+        const {value} = e.target;
+        this.setState({query: value})
+        this.props.updateEvents(this.props.selectedCity, value)
     }
 
 render() {
-    const { number } = this.state;
+    const { query } = this.state;
  
     return (
-        <div className="numberOfEvents">
+        <div>
         <h4>
          Number of events
         </h4>
@@ -24,11 +26,11 @@ render() {
           type="number" 
           id="default-number" 
           name="number" 
-          className='number'
-          value={number}
+          className='numberOfEvents'
+          value={query}
           onChange={this.handleChange}
           max={32}
-          min={0}
+          min={1}
           />
         </div>
      

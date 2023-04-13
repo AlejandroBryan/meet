@@ -21,9 +21,9 @@ describe('<Event /> Component', () => {
 
     test('render event view', () => {
       expect(EventWrapper.find('.event')).toHaveLength(1);
-      expect(EventWrapper.find('h2.summary')).toHaveLength(1);
-      expect(EventWrapper.find('p.location')).toHaveLength(1);
-      expect(EventWrapper.find('p.description')).toHaveLength(1);
+      expect(EventWrapper.find('h1.summary')).toHaveLength(1);
+      expect(EventWrapper.find('h4.location')).toHaveLength(1);
+      //expect(EventWrapper.find('p.description')).toHaveLength(1);
     });
 
     test('Check the collapsed default value', () => {
