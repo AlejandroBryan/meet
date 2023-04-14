@@ -13,7 +13,7 @@ export default class App extends Component {
       locations: [],
       selectedCity: null,
       events: [],
-      eventCount: 32
+      eventCount: 50
     }
   }
 
