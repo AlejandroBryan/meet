@@ -13,7 +13,7 @@ export default class App extends Component {
       locations: [],
       selectedCity: null,
       events: [],
-      eventCount: 50
+      eventCount: 32
     }
   }
 
@@ -21,8 +21,7 @@ export default class App extends Component {
     this.mounted = true;
     getEvents().then((events) => {
       if (this.mounted) {
-        const shownEvents = events.slice(0, this.state.eventCount);
-        this.setState({ events: shownEvents, locations: extractLocations(events) });
+        this.setState({ events, locations: extractLocations(events) });
       }
     });
   }
@@ -89,7 +88,7 @@ export default class App extends Component {
         />
         <NumberOfEvents
          selectedCity={this.state.selectedCity}
-         query={this.state.eventCount}
+         eventCount={this.state.eventCount}
          updateEvents={this.updateEvents}
          />
         <EventList events={this.state.events} />

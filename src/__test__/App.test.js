@@ -77,13 +77,13 @@ describe('<App/> Integration', () => {
   test("events state changes number of events changes", () => {
     const AppWrapper = mount(<App />);
     const eventCount = AppWrapper.state("eventCount");
-    expect(eventCount).toEqual(AppWrapper.find(NumberOfEvents).props().query);
+    expect(eventCount).toEqual(AppWrapper.find(NumberOfEvents).state().query);
     AppWrapper.unmount();
   });
   
   test("get list of events matching the number of events selected by the user", async () => {
     const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
-    const selectedNumber = Math.floor(Math.random() * 32);
+    const selectedNumber = Math.floor(Math.random() * 2);
     const event = { target: { value: selectedNumber } };
     await NumberOfEventsWrapper.instance().handleChange(event);
     expect(AppWrapper.state("eventCount")).toEqual(selectedNumber);

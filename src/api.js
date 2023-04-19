@@ -8,9 +8,9 @@ export const getAccessToken = async () => {
   const tokenCheck = accessToken && (await checkToken(accessToken));
 
   if (!accessToken || tokenCheck.error) {
-    await localStorage.removeItem("access_token");
+    localStorage.removeItem("access_token");
     const searchParams = new URLSearchParams(window.location.search);
-    const code = await searchParams.get("code");
+    const code =  searchParams.get("code");
     if (!code) {
       const results = await axios.get(
         "https://lsov6zii1i.execute-api.eu-central-1.amazonaws.com/dev/api/get-auth-url"
@@ -35,27 +35,28 @@ const checkToken = async (accessToken) => {
 
 export const getEvents = async () => {
   NProgress.start();
-
+  
   if (window.location.href.startsWith("http://localhost")) {
     NProgress.done();
     return mockData;
   }
 
-
+ 
   const token = await getAccessToken();
 
   if (token) {
     removeQuery();
-    const url = 'https://lsov6zii1i.execute-api.eu-central-1.amazonaws.com/dev/api/get-events' + '/' + token;
+    const url = `https://lsov6zii1i.execute-api.eu-central-1.amazonaws.com/dev/api/get-events/${token}`;
     const result = await axios.get(url);
     if (result.data) {
-      var locations = extractLocations(result.data.events);
+      let locations = extractLocations(result.data.events);
       localStorage.setItem("lastEvents", JSON.stringify(result.data));
       localStorage.setItem("locations", JSON.stringify(locations));
     }
     NProgress.done();
     return result.data.events;
   }
+  return;
 };
 
 const removeQuery = () => {
