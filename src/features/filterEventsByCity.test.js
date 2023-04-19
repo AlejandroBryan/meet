@@ -1,6 +1,7 @@
 import {mount, shallow} from 'enzyme';
 import App from '../App';
 import { mockData } from '../mock-data';
+import { getEvents } from '../api';
 import CitySearch from '../CitySearch';
 import { extractLocations } from "../api";
 
@@ -22,9 +23,11 @@ defineFeature(feature, test => {
   
       });
   
-      then('the user should see the list of upcoming events.', () => {
+      then('the user should see the list of upcoming events.', async () => {
         AppWrapper.update();
-        expect(AppWrapper.find('.event')).toHaveLength(mockData.length);
+        const allEvents = await getEvents();
+         const shownEvents = allEvents.slice(0, 32);
+        expect(AppWrapper.find('.event')).toHaveLength(shownEvents.length);
   
       });
     });
@@ -43,7 +46,7 @@ defineFeature(feature, test => {
   
       });
   
-      then('the user should receive a list of cities (suggestions) that match what they’ve typed', () => {
+      then('the user should receive a list of cities (suggestions) that match what they’ve typed',  () => {
         expect(CitySearchWrapper.find('.suggestions li')).toHaveLength(2);
       });
     });
@@ -75,8 +78,9 @@ defineFeature(feature, test => {
       });
   
       and('the user should receive a list of upcoming events in that city', async() => {
-      
-        expect(AppWrapper.find('.event')).toHaveLength(mockData.length);
+        const allEvents = await getEvents();
+        const shownEvents = allEvents.slice(0, 32);
+        expect(AppWrapper.find('.event')).toHaveLength(shownEvents.length);
   
       });
     });

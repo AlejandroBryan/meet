@@ -42,7 +42,7 @@ defineFeature(feature, test =>{
         });
 
         then('the User should be able to change the number of events they want to see.', () => {
-            expect(AppWrapper.find('.event')).toHaveLength(2);
+            expect(AppWrapper.find('.event')).toHaveLength(32);
 
         });
     });

@@ -83,11 +83,11 @@ describe('<App/> Integration', () => {
   
   test("get list of events matching the number of events selected by the user", async () => {
     const NumberOfEventsWrapper = AppWrapper.find(NumberOfEvents);
-    const selectedNumber = Math.floor(Math.random() * 2);
+    const selectedNumber = Math.floor(Math.random() * 32);
     const event = { target: { value: selectedNumber } };
     await NumberOfEventsWrapper.instance().handleChange(event);
     expect(AppWrapper.state("eventCount")).toEqual(selectedNumber);
-    expect(AppWrapper.state("events").length).toBe(selectedNumber);
+    expect(AppWrapper.state("events").length).toEqual(selectedNumber);
     AppWrapper.unmount();
   });
 
