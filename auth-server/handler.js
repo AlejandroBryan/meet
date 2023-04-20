@@ -1,4 +1,3 @@
-'use strict';
 const { google } = require('googleapis');
 const OAuth2 = google.auth.OAuth2;
 const calendar = google.calendar('v3');
@@ -73,7 +72,7 @@ module.exports.getAccessToken = async(event) => {
 
     }
   }).catch((err)=>{
-    console.error(err);
+    console.error('getAccessToken', err);
     return{
       statusCode: 500,
       body: JSON.stringify(err)
@@ -90,7 +89,7 @@ module.exports.getCalendarEvents= async(event)=>{
     redirect_uris[0]
   );
 
-  const access_token = decodeURI(`${event.pathParameters.access_token}`);
+  const access_token = decodeURIComponent(`${event.pathParameters.access_token}`);
   oAuth2Client.setCredentials({access_token});
 
   return new Promise((resolve, reject) => {
@@ -125,11 +124,12 @@ module.exports.getCalendarEvents= async(event)=>{
 
     }
   }).catch((err)=>{
-    console.error(err);
+    console.error('getCalendarEvents', err);
     return{
       statusCode: 500,
       headers:{
         'Access-Control-Allow-Origin': '*',
+        "Access-Control-Allow-Credentials": true,
       },
       body: JSON.stringify(err)
     }

@@ -123,8 +123,19 @@ input[type="number"] {
 
 .numberOfEvents {
   width: 200px;
-  margin: 20px auto;
+  margin: auto;
   text-align: center;
+  align-items: start;
+  
+}
+
+.numberOfEventsComponent {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 300px;
+  max-width: 300px;
+  margin: auto;
+  position: relative;
 }
 
 .button-wrapper {
@@ -135,11 +146,14 @@ input[type="number"] {
   font-family: sans-serif;
 }
 
-.Alert {
-  position: fixed;
+.Alert{
+  position: absolute;
   top: 20px;
 }
-
+.Alert-Error{
+  position: absolute;
+  bottom: -35px;
+}
 .data-vis-wrapper {
   display: flex;
   align-items: center;

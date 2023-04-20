@@ -35,7 +35,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "gh-page": "gh-pages -d build",
-    "git-update": "git add . && git commit -m 'refactor all the test' && git push -f",
+    "git-update": "git add . && git commit -m 'Add the alert component' && git push -f",
     "deploy": "npm run gh-page && npm run git-update"
   },
   "eslintConfig": {
