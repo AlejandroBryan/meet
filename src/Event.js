@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import moment from 'moment';
 
 export default class Event extends Component {
@@ -30,20 +31,21 @@ export default class Event extends Component {
         {collapsed ?(
           <div>
         <h1 className="summary">{event.summary}</h1>
-        <h3>Start: { `${startTime} (${event.start.timeZone})`}</h3>
-        <h4 className="location">{`@${event.summary}`} | {event.location}  </h4>
+        <h2>Start: { `${startTime} (${event.start.timeZone})`}</h2>
+        <h3 className="location">{`@${event.summary}`} | {event.location}  </h3>
         </div>
 
     ):(
       <div>
       <h1 className="summary">{event.summary}</h1>
-      <h3>Start: { `${startTime} (${event.start.timeZone})`}</h3>
+      <h4>Start: { `${startTime} (${event.start.timeZone})`}</h4>
       <p className="description">
       <span>Description</span>
       {event.description}
       </p>
-      <h4 className="location">{`@${event.summary}`} | {event.location}  </h4>
-      <h4>End: { `${endTime} (${event.start.timeZone})`}</h4>
+      <Link to={event.htmlLink}>Go for more details</Link>
+      <h5 className="location">{`@${event.summary}`} | {event.location}  </h5>
+      <h6>End: { `${endTime} (${event.start.timeZone})`}</h6>
       </div>
     ) }
 

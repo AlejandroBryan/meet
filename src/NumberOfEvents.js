@@ -33,9 +33,9 @@ render() {
  
     return (
         <div className="numberOfEventsComponent">
-        <h4>
+        <label htmlFor="default-number">
          Number of events
-        </h4>
+        </label>
          <input 
           type="number" 
           id="default-number" 
