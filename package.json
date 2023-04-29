@@ -36,7 +36,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "gh-page": "gh-pages -d build",
-    "git-update": "git add . && git commit -m 'Converting to a PWA' && git push -f",
+    "git-update": "git add . && git commit -m 'google auth and welcome screen page' && git push -f",
     "deploy": "npm run gh-page && npm run git-update"
   },
   "eslintConfig": {
