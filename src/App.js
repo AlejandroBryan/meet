@@ -144,7 +144,7 @@ export default class App extends Component {
 
         <div className="data-vis-wrapper">
         <EventGenre events={this.state.events}/>
-          <ResponsiveContainer width="100%" height={400}>
+          <ResponsiveContainer  height={400}>
             <ScatterChart margin={{ top: 20, right: 20, bottom: 20, left: 20 }}>
               <CartesianGrid />
               <XAxis type="category" dataKey="city" name="city" />
