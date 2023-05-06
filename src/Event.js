@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import moment from 'moment';
 
 export default class Event extends Component {
@@ -43,7 +42,9 @@ export default class Event extends Component {
       <span>Description</span>
       {event.description}
       </p>
-      <Link to={event.htmlLink}>Go for more details</Link>
+      <a href={event.htmlLink} target="_blank" rel="noopener noreferrer">
+        Go for more details
+      </a>
       <h5 className="location">{`@${event.summary}`} | {event.location}  </h5>
       <h6>End: { `${endTime} (${event.start.timeZone})`}</h6>
       </div>
