@@ -65,7 +65,7 @@ This project is licensed under the [MIT] License - see the LICENSE.md file for d
 ## Acknowledgments
 
 Reference, code, documentation, etc.
-* [nodejs](https://nodejs.org/en/)
+* [Nodejs](https://nodejs.org/en/)
 * [React](https://react.dev/) 
 * [Bootstrap](https://getbootstrap.com/)
 * [React-Bootstrap](https://react-bootstrap.github.io/)
