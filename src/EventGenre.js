@@ -17,7 +17,7 @@ const EventGenre = ({ events }) => {
       return data.filter((entry) => entry.value > 0);
     });
   }, [events]);
-
+console.log(data);
   return (
     <ResponsiveContainer width="100%" height={400}>
       <PieChart>
@@ -33,6 +33,7 @@ const EventGenre = ({ events }) => {
         >
           {data.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index]} />
+        
           ))}
         </Pie>
       </PieChart>
